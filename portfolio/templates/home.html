@@ -1,0 +1,58 @@
+{% extends 'layout.html' %} {% block content %} {% load static %}
+
+<header class="row align-items-center bg-black">
+	<div class="col-md-4">
+		<img
+			src="{% static 'portfolio/home.png' %}"
+			alt="Gustavo A. Perpetua"
+			class="img-fluid" />
+	</div>
+	<div class="col-md-8 d-flex flex-column justify-content-center">
+		<h1 class="orange"><strong>Gustavo A. Perpetua</strong></h1>
+		<h2>Python FullStack Developer</h2>
+		<p>
+			Poseo formación y habilidades en programación y administración, lo que me
+			permite adaptarme a diferentes entornos de trabajo y ofrecer soluciones
+			eficientes. Me destaco por mi capacidad de organizar tareas, optimizar
+			procesos y resolver problemas tanto técnicos como administrativos. Soy una
+			persona comprometida, con muchas ganas de aprender y aportar al equipo
+		</p>
+		<div class="text-center">
+			<a
+				href="{% static 'portfolio/CV.pdf' %}"
+				class="btn btn-orange btn-lg my-3"
+				target="_blank"
+				>Download CV</a
+			>
+		</div>
+	</div>
+</header>
+
+<div class="row my-4 text-center">
+	{% for project in projects %}
+	<div class="col-md-4 p-4">
+		<div class="card bg-black card-project">
+			<img
+				src="{{ project.image.url }}"
+				alt="{{ project.title }}"
+				class="card-img-top" />
+			<div class="card-body">
+				<h2 class="orange">{{ project.title }}</h2>
+				<p>{{ project.description }}</p>
+
+				{% if project.url %}
+				<a
+					href="{{ project.url }}"
+					class="btn btn-orange btn-sm mt-auto"
+					target="_blank"
+					>{{project.url}}</a
+				>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{% endfor %}
+</div>
+
+{% endblock %}

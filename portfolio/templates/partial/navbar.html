@@ -1,0 +1,29 @@
+{% load static%}
+
+<nav class="navbar navbar-expand-lg bg-custom">
+	<div class="container">
+		<a class="navbar-brand fw-bold fst-italic" href="/">GP</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarNavAltMarkup"
+			aria-controls="navbarNavAltMarkup"
+			aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav ms-auto">
+				<a class="nav-link" href="{% url 'blog:posts' %}">Blog</a>
+				<a
+					class="btn btn-orange btn-sm ms-4"
+					href="{% static 'portfolio/CV.pdf'%}"
+					target="_blank"
+					>Download CV</a
+				>
+			</div>
+		</div>
+	</div>
+</nav>
+

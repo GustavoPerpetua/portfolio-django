@@ -1,0 +1,156 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* Asegura que los elementos respeten los bordes y padding */
+}
+html,
+body {
+	height: 100%;
+	background-color: #000 !important; /* Fondo negro para el body */
+}
+
+.bg-black {
+	background: #252a2e;
+	color: #ecf0f1;
+}
+
+/* Asegurar que la imagen llene su columna y sea responsiva */
+.col-md-4 img {
+	height: 100%;
+	width: auto;
+	object-fit: cover;
+}
+
+/* Estilo del botón naranja */
+.btn-orange {
+	background-color: #ff8c00;
+	border-color: #ff8c00;
+	color: white;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 30px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease, box-shadow 0.3s ease,
+		transform 0.3s ease;
+}
+
+.btn-orange:hover {
+	background-color: #e67e22;
+	border-color: #e67e22;
+}
+
+/* Centrar el contenido de la columna de texto */
+.col-md-8 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+/* Ajustar altura del contenedor en caso necesario */
+.row.align-items-center {
+	height: 100%;
+}
+
+/* Color de fondo personalizado para la navbar */
+.bg-custom {
+	background-color: #1e2326; /* Color oscuro de fondo */
+}
+
+/* Color del texto del navbar */
+.navbar-brand,
+.nav-link {
+	color: #ecf0f1 !important; /* Color claro para el texto */
+}
+
+/* Color de los enlaces al hacer hover */
+.nav-link:hover {
+	color: #ff8c00 !important; /* Color naranja al hacer hover */
+}
+
+/* Naranja para */
+.navbar-brand {
+	color: #ff8c00 !important;
+}
+.orange {
+	color: #ff8c00 !important;
+}
+/* Espacio entre el enlace y el botón */
+.ms-3 {
+	margin-left: 1rem !important; /* Espacio a la izquierda del botón */
+}
+
+/* Estilo del botón naranja */
+.btn-orange {
+	background-color: #ff8c00;
+	border-color: #ff8c00;
+	color: white;
+	padding: 8px 12px;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 30px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease, box-shadow 0.3s ease,
+		transform 0.3s ease;
+}
+
+/* Estilo para el hover */
+.btn-orange:hover {
+	background-color: #e67e22; /* Un tono más oscuro de naranja */
+	border-color: #e67e22;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+	transform: translateY(-2px); /* Efecto de elevación */
+	color: white;
+}
+
+/* Estilo para el foco (cuando el botón es seleccionado) */
+.btn-orange:focus {
+	outline: none;
+	box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.5);
+}
+
+/* Estilo para el botón cuando está activo (click) */
+.btn-orange:active {
+	background-color: #d35400;
+	border-color: #d35400;
+	box-shadow: none;
+	transform: translateY(0); /* Botón vuelve a su posición original */
+}
+
+.card-project:hover {
+	border: 1px solid #e67e22;
+	cursor: pointer;
+}
+
+.card-project {
+	overflow: hidden;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+}
+
+.card-project .card-body {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.card-project .btn {
+	margin-top: auto; /* Empuja el botón hacia la parte inferior del contenido */
+}
+
+/* Ajustar márgenes en pantallas pequeñas */
+@media (max-width: 992px) {
+	.navbar-nav {
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	.navbar-nav .nav-link {
+		margin-bottom: 10px;
+	}
+}
